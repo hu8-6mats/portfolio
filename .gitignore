@@ -120,7 +120,6 @@ out/
 Thumbs.db
 
 # IDE/editor related
-.vscode/
 *.swp
 *.swo
 

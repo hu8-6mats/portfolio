@@ -1,5 +1,7 @@
 # portfolio
 
+## Overview
+
 ## How to build the environment
 
 1. **Build images & Launch Containers**
@@ -46,12 +48,14 @@
     | Mail     | [localhost:8025](http://localhost:8025) |
     | Database | [localhost:5050](http://localhost:5050) |
 
-## Architectures
+## Product architectures
 
 ### Frontend
 
+---
+
 The frontend is developed using the Next.js framework.  
-Version information is below.
+The version information is below.
 
 |            |        |
 | :--------- | :----- |
@@ -59,12 +63,14 @@ Version information is below.
 | React      | 18.3.1 |
 | TypeScript | 5.5.4  |
 
-|                  |                                             |
-| :--------------- | :------------------------------------------ |
-| `node_modules`   | Project dependencies                        |
-| `public`         | Static assets, initial settings             |
-| `src/`           | Source code                                 |
-| ├── `components` | Reusable UI elements, common parts          |
-| ├── `features`   | Features by function, screen-specific logic |
-| ├── `routes`     | Routingcon figuration for different screens |
-| └── `utilities`  | Helper functions and utilities              |
+---
+
+The directory structure is as follows.
+
+|                  |                                    |
+| :--------------- | :--------------------------------- |
+| `node_modules`   | Project dependencies               |
+| `public`         | Static assets, initial settings    |
+| `src/`           | Source code                        |
+| ├── `app`        | Directory for routing and layouts  |
+| ├── `components` | Reusable UI elements, common parts |
