@@ -1,0 +1,39 @@
+.cursor {
+    --cursor-size: 2rem;
+    --cursor-offset: -1rem;
+
+    /* Layout */
+    position: fixed;
+
+    /* Color & Background */
+    background: radial-gradient(circle, var(--white-75) 0%, transparent 70%);
+
+    /* Sizing */
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: 50%;
+
+    /* Positioning */
+    top: var(--cursor-offset);
+    left: var(--cursor-offset);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    /* Decorations */
+    pointer-events: none;
+
+    /* Transitions & Animations */
+    transition: width 500ms ease, height 250ms ease;
+}
+
+.cursor.hovered {
+    /* Sizing */
+    width: calc(var(--cursor-size) * 1.5);
+    height: calc(var(--cursor-size) * 1.5);
+}
+
+.cursor.clicked {
+    /* Sizing */
+    width: calc(var(--cursor-size) * 0.5);
+    height: calc(var(--cursor-size) * 0.5);
+}
