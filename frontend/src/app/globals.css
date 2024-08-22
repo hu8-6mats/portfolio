@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+:root {
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-75: rgba(255, 255, 255, 0.75);
+    --white-100: rgba(255, 255, 255, 1);
+    --gray-50: rgba(50, 50, 50, 0.5);
+    --gray-75: rgba(50, 50, 50, 0.75);
+    --gray-100: rgba(50, 50, 50, 1);
+    --black-50: rgba(0, 0, 0, 0.5);
+    --black-75: rgba(0, 0, 0, 0.75);
+    --black-100: rgba(0, 0, 0, 1);
+    --syan-50: rgba(0, 255, 255, 0.5);
+    --syan-75: rgba(0, 255, 255, 0.75);
+    --syan-100: rgba(0, 255, 255, 1);
+}
+
+* {
+    /* Typography */
+    font-family: 'Prata', serif;
+    cursor: none;
+
+    /* Sizing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /* Color & Background */
+    color: var(--white-75);
+    background: var(--black-100);
+
+    /* Typography */
+    font-size: 62.5%;
+
+    /* Sizing */
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+
+    /* Decorations */
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    /* Decorations */
+    list-style: none;
+}
+
+a {
+    /* Color & Background */
+    color: inherit;
+
+    /* Decorations */
+    text-decoration: none;
+}
+
+table {
+    /* Sizing */
+    border-spacing: 0;
+
+    /* Decorations */
+    border-collapse: collapse;
+}
+
+input:focus {
+    /* Decorations */
+    outline: none;
+    box-shadow: none;
+}
+
+input::placeholder {
+    /* Color & Background */
+    color: transparent;
+}
