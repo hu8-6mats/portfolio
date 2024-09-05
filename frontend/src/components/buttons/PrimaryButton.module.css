@@ -1,0 +1,38 @@
+.primaryButton {
+    /* Layout */
+    margin-block: 0.75rem;
+    padding: 0.75rem 5rem;
+    width: 100%;
+
+    /* Color */
+    border: var(--black-100);
+    background: radial-gradient(circle, var(--gray-50) 0%, var(--black-100) 100%);
+    color: var(--white-75);
+
+    /* Typography */
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-extralight);
+    letter-spacing: 0.25em;
+
+    /* Sizing */
+    opacity: 0;
+
+    /* Animation */
+    transition: opacity 750ms ease, transform 500ms ease;
+
+    /* Decoration */
+    border-radius: 5%;
+}
+
+.primaryButtonVisible {
+    /* Color */
+    opacity: 1;
+}
+
+.primaryButton:hover {
+    /* Animation */
+    transform: translateY(0.25em);
+
+    /* Color */
+    background: radial-gradient(circle, var(--gray-100) 0%, var(--black-100) 100%);
+}

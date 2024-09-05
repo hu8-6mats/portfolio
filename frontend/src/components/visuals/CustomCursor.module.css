@@ -5,7 +5,7 @@
     /* Layout */
     position: fixed;
 
-    /* Color & Background */
+    /* Color */
     background: radial-gradient(circle, var(--white-75) 0%, transparent 70%);
 
     /* Sizing */
@@ -19,10 +19,10 @@
     transform: translate(-50%, -50%);
     z-index: 999;
 
-    /* Decorations */
+    /* Decoration */
     pointer-events: none;
 
-    /* Transitions & Animations */
+    /* Animation */
     transition: width 500ms ease, height 250ms ease;
 }
 
