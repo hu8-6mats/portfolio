@@ -1,0 +1,38 @@
+.top {
+    /* Layout */
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    height: 100vh;
+}
+
+.canvas {
+    /* Layout */
+    grid-row: 1 / 2;
+
+    /* Sizing */
+    height: 100%;
+    width: 100%;
+}
+
+.message {
+    /* Layout */
+    grid-row: 2 / 3;
+
+    /* Typography */
+    font-size: 2rem;
+    font-weight: var(--font-weight-extralight);
+    line-height: 2em;
+    color: var(--white-75);
+    text-align: center;
+
+    /* Sizing */
+    margin-top: -90px;
+}
+
+.button {
+    /* Layout */
+    grid-row: 3 / 4;
+
+    /* Sizing */
+    margin-top: -50px;
+}
