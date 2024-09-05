@@ -20,7 +20,7 @@
 
     /* Typography */
     font-size: 2rem;
-    font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-light);
     line-height: 2em;
     color: var(--white-75);
     text-align: center;
