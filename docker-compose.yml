@@ -2,7 +2,7 @@ services:
     frontend:
         build: ./frontend
         ports:
-            - "3000:3000"
+            - '3000:3000'
         volumes:
             - ./frontend:/app
         depends_on:
@@ -14,7 +14,7 @@ services:
         build: ./backend
         command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
         ports:
-            - "8000:8000"
+            - '8000:8000'
         volumes:
             - ./backend:/app
         depends_on:
@@ -37,8 +37,8 @@ services:
         image: mailhog/mailhog
         platform: linux/amd64
         ports:
-            - "1025:1025"
-            - "8025:8025"
+            - '1025:1025'
+            - '8025:8025'
 
     pgadmin:
         image: dpage/pgadmin4
@@ -46,7 +46,7 @@ services:
             PGADMIN_DEFAULT_EMAIL: admin@example.com
             PGADMIN_DEFAULT_PASSWORD: password
         ports:
-            - "5050:80"
+            - '5050:80'
         depends_on:
             - db
 

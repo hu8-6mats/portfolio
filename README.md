@@ -74,3 +74,68 @@ The directory structure is as follows.
 | `src/`           | Source code                        |
 | ├── `app`        | Directory for routing and layouts  |
 | ├── `components` | Reusable UI elements, common parts |
+
+1. Layout
+
+    要素の配置やフレキシビリティを管理する
+
+    - display
+    - flex
+    - justify-content
+    - align-items
+    - grid
+
+2. Color
+
+    要素の視覚的なスタイルを設定する
+
+    - color
+    - background
+    - opacity
+
+3. Typography
+
+    テキストの見た目を調整する
+
+    - font-family
+    - font-size
+    - font-weight
+    - line-height
+    - letter-spacing
+    - text-align
+    - text-transform
+
+4. Sizing
+
+    要素のサイズと間隔を制御する
+
+    - width
+    - height
+    - padding
+    - margin
+    - border
+
+5. Positioning
+
+    要素の位置を調整する
+
+    - position
+    - top, right, bottom, left
+    - z-index
+
+6. Decoration
+
+    要素の視覚的な装飾を管理する
+
+    - border-radius
+    - box-shadow
+    - text-shadow
+    - list-style
+    - outline
+
+7. Animation
+
+    要素の動きを管理する
+
+    - transition
+    - animation

@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;700&display=swap');
 
 :root {
+    --font-family-primary: 'Source Code Pro', monospace;
+    --font-weight-extralight: 200;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
     --white-50: rgba(255, 255, 255, 0.5);
     --white-75: rgba(255, 255, 255, 0.75);
     --white-100: rgba(255, 255, 255, 1);
@@ -17,7 +23,7 @@
 
 * {
     /* Typography */
-    font-family: 'Prata', serif;
+    font-family: var(--font-family-primary);
     cursor: none;
 
     /* Sizing */
@@ -28,7 +34,7 @@
 
 html,
 body {
-    /* Color & Background */
+    /* Color */
     color: var(--white-75);
     background: var(--black-100);
 
@@ -40,21 +46,21 @@ body {
     height: 100%;
     width: 100%;
 
-    /* Decorations */
+    /* Decoration */
     overflow-x: hidden;
 }
 
 ol,
 ul {
-    /* Decorations */
+    /* Decoration */
     list-style: none;
 }
 
 a {
-    /* Color & Background */
+    /* Color */
     color: inherit;
 
-    /* Decorations */
+    /* Decoration */
     text-decoration: none;
 }
 
@@ -62,17 +68,17 @@ table {
     /* Sizing */
     border-spacing: 0;
 
-    /* Decorations */
+    /* Decoration */
     border-collapse: collapse;
 }
 
 input:focus {
-    /* Decorations */
+    /* Decoration */
     outline: none;
     box-shadow: none;
 }
 
 input::placeholder {
-    /* Color & Background */
+    /* Color */
     color: transparent;
 }
