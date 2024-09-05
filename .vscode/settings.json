@@ -12,7 +12,5 @@
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "es5",
-    "prettier.useTabs": false,
-
-    "extensions.recommended": ["ms-vscode.cpptools", "dbaeumer.vscode-eslint", "eamodio.gitlens"]
+    "prettier.useTabs": false
 }

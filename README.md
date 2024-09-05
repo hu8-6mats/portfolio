@@ -16,27 +16,29 @@
 
     ```console
     docker ps --all
+
+    NAMES
+    portfolio-frontend-1
+    portfolio-backend-1
+    portfolio-pgadmin-1
+    portfolio-mailhog-1
+    portfolio-db-1
     ```
 
-3. **Build the backend vurtual environment**
-
-    The following operations are performed so that the library can be recognized in the local environment.
+3. **Build the backend environment**
 
     ```console
     cd portfolio/backend
 
-    python3 -m venv .venv
-    source .venv/bin/activate
-
     pip install -r requirements.txt
     ```
 
-4. **Start the frontend environment**
+4. **Build the frontend environment**
 
     ```console
     cd portfolio/frontend
 
-    npm run dev
+    npm install
     ```
 
 5. **Verify that localhost is accessible**
@@ -59,83 +61,35 @@ The version information is below.
 
 |            |        |
 | :--------- | :----- |
-| Next.js    | 14.2.5 |
-| React      | 18.3.1 |
-| TypeScript | 5.5.4  |
+| Next.js    | 14.2.7 |
+| React      | 18.2.0 |
+| TypeScript | 5.2.2  |
 
 ---
 
 The directory structure is as follows.
 
-|                  |                                    |
-| :--------------- | :--------------------------------- |
-| `node_modules`   | Project dependencies               |
-| `public`         | Static assets, initial settings    |
-| `src/`           | Source code                        |
-| ├── `app`        | Directory for routing and layouts  |
-| ├── `components` | Reusable UI elements, common parts |
+|                  |                                      |
+| :--------------- | :----------------------------------- |
+| `node_modules`   | Project dependencies                 |
+| `public`         | Static assets, initial settings      |
+| `src/`           | Source code                          |
+| ├── `app`        | Directory for routing and layouts    |
+| ├── `components` | Reusable UI elements, common parts   |
+| ├── `functions`  | Reusable functions, common processes |
 
-1. Layout
+---
 
-    要素の配置やフレキシビリティを管理する
+- `app`
 
-    - display
-    - flex
-    - justify-content
-    - align-items
-    - grid
+    Use AppRouter, which is recommended for Next.js Series 13 or later.  
+    In the directory under app, place a folder with a name corresponding to each root,  
+    and use `page.tsx` in that folder to control the actual browser display.
 
-2. Color
+- `components`
 
-    要素の視覚的なスタイルを設定する
+    Stores elements that may be used throughout the system, such as buttons and 3d models.
 
-    - color
-    - background
-    - opacity
+- `functions`
 
-3. Typography
-
-    テキストの見た目を調整する
-
-    - font-family
-    - font-size
-    - font-weight
-    - line-height
-    - letter-spacing
-    - text-align
-    - text-transform
-
-4. Sizing
-
-    要素のサイズと間隔を制御する
-
-    - width
-    - height
-    - padding
-    - margin
-    - border
-
-5. Positioning
-
-    要素の位置を調整する
-
-    - position
-    - top, right, bottom, left
-    - z-index
-
-6. Decoration
-
-    要素の視覚的な装飾を管理する
-
-    - border-radius
-    - box-shadow
-    - text-shadow
-    - list-style
-    - outline
-
-7. Animation
-
-    要素の動きを管理する
-
-    - transition
-    - animation
+    Stores functions that may be used system-wide, such as text display control.

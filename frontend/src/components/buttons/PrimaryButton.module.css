@@ -17,11 +17,11 @@
     /* Sizing */
     opacity: 0;
 
-    /* Animation */
-    transition: opacity 750ms ease, transform 500ms ease;
-
     /* Decoration */
     border-radius: 5%;
+
+    /* Animation */
+    transition: opacity 750ms ease, transform 500ms ease;
 }
 
 .primaryButtonVisible {
@@ -30,9 +30,9 @@
 }
 
 .primaryButton:hover {
-    /* Animation */
-    transform: translateY(0.25em);
-
     /* Color */
     background: radial-gradient(circle, var(--gray-100) 0%, var(--black-100) 100%);
+
+    /* Animation */
+    transform: translateY(0.25em);
 }
