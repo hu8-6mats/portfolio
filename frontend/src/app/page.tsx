@@ -22,7 +22,7 @@ const Home = () => {
             <div className={styles.message}>
                 <SequentialMessage
                     message={'Welcome to our portfolio.\nPlease login or register to proceed.'}
-                    primaryDelay={1500}
+                    primaryDelayMS={1500}
                 />
             </div>
             <div className={styles.button}>
