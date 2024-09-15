@@ -3,48 +3,58 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PrimaryButton.module.css';
 
-type PrimaryButtonProps = {
-    label: string;
+type PrimaryButtonProps<T = any> = {
+    primaryDelayMS?: number;
+    buttonType: 'button' | 'submit';
+    buttonLabel: string;
     redirectUrl?: string;
-    primaryDelay: number;
-    buttonType: 'submit' | 'reset' | 'button';
     onClick?: () => void;
+    onSubmit?: (data: T) => void;
+    data?: T;
 };
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({
-    label,
-    redirectUrl,
-    primaryDelay,
+const PrimaryButton = <T,>({
+    primaryDelayMS = 1000,
     buttonType,
+    buttonLabel,
+    redirectUrl,
     onClick,
-}) => {
-    const [isButtonVisible, setIsButtonVisible] = useState(false);
+    onSubmit,
+    data,
+}: PrimaryButtonProps<T>) => {
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setIsButtonVisible(true);
-        }, primaryDelay);
+            setIsVisible(true);
+        }, primaryDelayMS);
 
         return () => clearTimeout(timer);
-    }, [primaryDelay]);
+    }, [primaryDelayMS]);
 
-    const handleClick = () => {
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+
+        if (onSubmit && data !== undefined) {
+            onSubmit(data);
+        }
+
         if (redirectUrl) {
             window.location.href = redirectUrl;
-        } else {
-            onClick?.();
+        }
+
+        if (onClick) {
+            onClick();
         }
     };
 
     return (
         <button
-            className={`${styles.primaryButton} ${
-                isButtonVisible ? styles.primaryButtonVisible : ''
-            }`}
+            className={`${styles.primaryButton} ${isVisible ? styles.primaryButtonVisible : ''}`}
             onClick={handleClick}
             type={buttonType}
         >
-            {label}
+            {buttonLabel}
         </button>
     );
 };

@@ -1,0 +1,129 @@
+.leftArrowButton {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sizing */
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem;
+    margin-block: 0.75rem;
+
+    /* Positioning */
+    position: relative;
+
+    /* Color */
+    background: var(--blacks-75);
+    color: var(--white-75);
+    border: none;
+
+    /* Typography */
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-light);
+
+    /* Decoration */
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--white-50);
+
+    /* Animation */
+    opacity: 0;
+    transition: opacity 750ms ease, transform 500ms ease, box-shadow 500ms ease;
+}
+
+.leftArrowButtonVisible {
+    /* Animation */
+    opacity: 1;
+}
+
+.leftArrowButton::after {
+    /* Layout */
+    content: '';
+
+    /* Sizing */
+    width: 10px;
+    height: 10px;
+
+    /* Color */
+    border-left: 1px solid var(--white-75);
+    border-top: 1px solid var(--white-75);
+
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.leftArrowButton:hover {
+    /* Decoration */
+    box-shadow: 5px 0px 10px var(--white-50);
+
+    /* Animation */
+    transform: translateX(-10px);
+}
+
+.rightArrowButton {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sizing */
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem;
+    margin-block: 0.75rem;
+
+    /* Positioning */
+    position: relative;
+
+    /* Color */
+    background: var(--blacks-75);
+    color: var(--white-75);
+    border: none;
+
+    /* Typography */
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-light);
+
+    /* Decoration */
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--white-50);
+
+    /* Animation */
+    opacity: 0;
+    transition: opacity 750ms ease, transform 500ms ease, box-shadow 500ms ease;
+}
+
+.rightArrowButtonVisible {
+    /* Animation */
+    opacity: 1;
+}
+
+.rightArrowButton::after {
+    /* Layout */
+    content: '';
+
+    /* Sizing */
+    width: 10px;
+    height: 10px;
+
+    /* Color */
+    border-right: 1px solid var(--white-75);
+    border-top: 1px solid var(--white-75);
+
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.rightArrowButton:hover {
+    /* Decoration */
+    box-shadow: -5px 0px 10px var(--white-50);
+
+    /* Animation */
+    transform: translateX(10px);
+}

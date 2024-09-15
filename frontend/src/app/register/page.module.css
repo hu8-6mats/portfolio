@@ -1,0 +1,42 @@
+.top {
+    /* 1. Layout */
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+
+    /* 4. Sizing */
+    height: 100vh;
+}
+
+.canvas {
+    /* 1. Layout */
+    grid-row: 1 / 2;
+
+    /* 4. Sizing */
+    height: 100%;
+    width: 100%;
+}
+
+.form {
+    /* 1. Layout */
+    grid-row: 2 / 3;
+
+    /* 2. Color */
+    color: var(--white-75);
+
+    /* 3. Typography */
+    font-size: 2rem;
+    font-weight: var(--font-weight-light);
+    line-height: 1.5em;
+    text-align: center;
+
+    /* 4. Sizing */
+    margin-top: -10rem;
+}
+
+.button {
+    /* 1. Layout */
+    grid-row: 3 / 4;
+
+    /* 4. Sizing */
+    margin-top: -6.5rem;
+}

@@ -1,0 +1,84 @@
+.field {
+    /* 1. Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 2. Color */
+    opacity: 0;
+
+    /* 7. Animation */
+    transition: opacity 750ms ease;
+}
+
+.fieldVisible {
+    /* 2. Color */
+    opacity: 1;
+}
+
+.inputWrapper {
+    /* 1. Layout */
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 125%;
+}
+
+.passwordToggle {
+    /* 5. Positioning */
+    position: absolute;
+    right: -5rem;
+    top: 3rem;
+    transform: translateY(-50%);
+
+    /* 2. Color */
+    color: var(--gray-75);
+    cursor: pointer;
+
+    /* 6. Decoration */
+    font-size: 2.5rem;
+}
+
+.input {
+    /* 2. Color */
+    background: var(--black-75);
+    color: var(--white-75);
+
+    /* 3. Typography */
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.15em;
+
+    /* 4. Sizing */
+    width: 100%;
+
+    /* 5. Positioning */
+    z-index: 10;
+}
+
+.input::placeholder {
+    /* 2. Color */
+    color: var(--white-50);
+
+    /* 5. Positioning */
+    z-index: 5;
+}
+
+.border {
+    /* 2. Color */
+    background: linear-gradient(
+        to right,
+        var(--black-100) 0%,
+        var(--white-100) 50%,
+        var(--black-100) 100%
+    );
+
+    /* 4. Sizing */
+    height: 1%;
+    width: 200%;
+
+    /* 5. Positioning */
+    position: relative;
+}

@@ -58,6 +58,7 @@ The order in which styles are described for each class should be as follows.
     - height
     - padding
     - margin
+    - gap
     - border
 
 5. **Positioning**
@@ -83,28 +84,28 @@ The order in which styles are described for each class should be as follows.
 
 ```css
 .primaryButton {
-    /* Layout */
+    /* 1. Layout */
     margin-block: 0.75rem;
     padding: 0.75rem 5rem;
     width: 100%;
 
-    /* Color */
+    /* 2. Color */
     border: var(--black-100);
     background: radial-gradient(circle, var(--gray-50) 0%, var(--black-100) 100%);
     color: var(--white-75);
 
-    /* Typography */
+    /* 3. Typography */
     font-size: 1.5rem;
     font-weight: var(--font-weight-light);
     letter-spacing: 0.25em;
 
-    /* Sizing */
+    /* 4. Sizing */
     opacity: 0;
 
-    /* Decoration */
+    /* 6. Decoration */
     border-radius: 5%;
 
-    /* Animation */
+    /* 7. Animation */
     transition: opacity 750ms ease, transform 500ms ease;
 }
 ```

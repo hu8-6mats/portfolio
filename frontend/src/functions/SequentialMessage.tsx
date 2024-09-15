@@ -1,20 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import styles from './BinaryToMessage.module.css';
+import styles from './SequentialMessage.module.css';
 
-type BinaryToMessageProps = {
+type SequentialMessageProps = {
+    primaryDelayMS?: number;
+    binaryStringDelayMS?: number;
+    messageDelayMS?: number;
     message: string;
-    primaryDelay: number;
-    binaryStringDelay: number;
-    messageDelay: number;
 };
 
-const BinaryToMessage: React.FC<BinaryToMessageProps> = ({
+const SequentialMessage: React.FC<SequentialMessageProps> = ({
+    primaryDelayMS = 1000,
+    binaryStringDelayMS = 10,
+    messageDelayMS = 20,
     message,
-    primaryDelay,
-    binaryStringDelay,
-    messageDelay,
 }) => {
     const [displayedMessage, setDisplayedMessage] = useState('');
 
@@ -36,17 +36,17 @@ const BinaryToMessage: React.FC<BinaryToMessageProps> = ({
                 const segment = segments[j];
                 const binaryString = await fetchBinaryString(segment.length);
 
-                await new Promise((resolve) => setTimeout(resolve, primaryDelay));
+                await new Promise((resolve) => setTimeout(resolve, primaryDelayMS));
 
                 for (let i = 0; i < binaryString.length; i++) {
                     temporaryMessage += binaryString[i];
                     setDisplayedMessage(temporaryMessage);
 
-                    await new Promise((resolve) => setTimeout(resolve, binaryStringDelay));
+                    await new Promise((resolve) => setTimeout(resolve, binaryStringDelayMS));
                 }
 
                 for (let i = 0; i < segment.length; i++) {
-                    await new Promise((resolve) => setTimeout(resolve, messageDelay));
+                    await new Promise((resolve) => setTimeout(resolve, messageDelayMS));
 
                     temporaryMessage =
                         temporaryMessage.slice(
@@ -78,4 +78,4 @@ const BinaryToMessage: React.FC<BinaryToMessageProps> = ({
     );
 };
 
-export default BinaryToMessage;
+export default SequentialMessage;

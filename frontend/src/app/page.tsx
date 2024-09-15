@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 
 import SphereCanvas from '@/components/visuals/SphereCanvas';
-import BinaryToMessage from '@/functions/BinaryToMessage';
+import SequentialMessage from '@/functions/SequentialMessage';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 
 const Home = () => {
@@ -20,25 +20,23 @@ const Home = () => {
                 />
             </div>
             <div className={styles.message}>
-                <BinaryToMessage
+                <SequentialMessage
                     message={'Welcome to our portfolio.\nPlease login or register to proceed.'}
                     primaryDelay={1500}
-                    binaryStringDelay={25}
-                    messageDelay={50}
                 />
             </div>
             <div className={styles.button}>
                 <PrimaryButton
-                    label='Login'
-                    redirectUrl='/login'
+                    primaryDelayMS={6000}
+                    buttonLabel='Login'
                     buttonType='button'
-                    primaryDelay={9000}
+                    redirectUrl='/login'
                 />
                 <PrimaryButton
-                    label='Register'
-                    redirectUrl='/register'
+                    primaryDelayMS={7000}
+                    buttonLabel='Register'
                     buttonType='button'
-                    primaryDelay={10000}
+                    redirectUrl='/register'
                 />
             </div>
         </div>

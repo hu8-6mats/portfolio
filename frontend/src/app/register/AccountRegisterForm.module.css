@@ -1,0 +1,59 @@
+.form {
+    /* 1. Layout */
+    display: flex;
+    flex-direction: column;
+
+    /* 4. Sizing */
+    gap: 2rem;
+
+    /* 5. Positioning */
+    z-index: 5;
+}
+
+.button {
+    /* 4. Sizing */
+    margin: 0 auto;
+    width: 50%;
+}
+
+.field {
+    /* 1. Layout */
+    display: flex;
+
+    /* 4. Sizing */
+    margin: 0 auto;
+    gap: 10rem;
+
+    /* 5. Positioning */
+    z-index: 10;
+}
+
+.modalTitle {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.modalDescription {
+    margin-bottom: 5rem;
+}
+
+.modalContents {
+    font-size: 1.75rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.modalContent {
+    margin-bottom: 1.5rem;
+}
+
+.modalContent input {
+    margin-block: 1rem;
+    padding-block: 0.75rem;
+    color: var(--white-50);
+}
+
+.modalButton {
+    width: 50%;
+    margin: 10rem auto;
+}
