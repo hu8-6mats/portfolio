@@ -1,38 +1,42 @@
 .top {
-    /* Layout */
+    /* 1. Layout */
     display: grid;
     grid-template-rows: 80% 10% 10%;
+
+    /* 4. Sizing */
     height: 100vh;
 }
 
 .canvas {
-    /* Layout */
+    /* 1. Layout */
     grid-row: 1 / 2;
 
-    /* Sizing */
+    /* 4. Sizing */
     height: 100%;
     width: 100%;
 }
 
 .message {
-    /* Layout */
+    /* 1. Layout */
     grid-row: 2 / 3;
 
-    /* Typography */
+    /* 2. Color */
+    color: var(--white-75);
+
+    /* 3. Typography */
     font-size: 2rem;
     font-weight: var(--font-weight-light);
     line-height: 2em;
-    color: var(--white-75);
     text-align: center;
 
-    /* Sizing */
-    margin-top: -90px;
+    /* 4. Sizing */
+    margin-top: -9rem;
 }
 
 .button {
-    /* Layout */
+    /* 1. Layout */
     grid-row: 3 / 4;
 
-    /* Sizing */
-    margin-top: -50px;
+    /* 4. Sizing */
+    margin-top: -5rem;
 }

@@ -2,6 +2,7 @@
 
 :root {
     --font-family-primary: 'Inconsolata', monospace;
+
     --font-weight-light: 300;
     --font-weight-normal: 600;
     --font-weight-bold: 900;
@@ -12,23 +13,24 @@
     --gray-50: rgba(50, 50, 50, 0.5);
     --gray-75: rgba(50, 50, 50, 0.75);
     --gray-100: rgba(50, 50, 50, 1);
+    --darkgray-50: rgba(25, 25, 25, 0.5);
+    --darkgray-75: rgba(25, 25, 25, 0.75);
+    --darkgray-100: rgba(25, 25, 25, 1);
     --black-50: rgba(0, 0, 0, 0.5);
     --black-75: rgba(0, 0, 0, 0.75);
     --black-100: rgba(0, 0, 0, 1);
-    --syan-50: rgba(0, 255, 255, 0.5);
-    --syan-75: rgba(0, 255, 255, 0.75);
-    --syan-100: rgba(0, 255, 255, 1);
 }
 
 * {
     /* Typography */
     font-family: var(--font-family-primary);
-    cursor: none;
 
     /* Sizing */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    cursor: none;
 }
 
 html,
@@ -47,6 +49,7 @@ body {
 
     /* Decoration */
     overflow-x: hidden;
+    cursor: none;
 }
 
 ol,
@@ -69,6 +72,11 @@ table {
 
     /* Decoration */
     border-collapse: collapse;
+}
+
+input {
+    /* Decoration */
+    border: none;
 }
 
 input:focus {
