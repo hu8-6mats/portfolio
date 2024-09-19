@@ -93,12 +93,12 @@ The directory structure is as follows.
 
 ```txt
 root
-├── .conventions          # Project conventions and guidelines
-├── .gitignore            # Git ignore file to exclude files from version control
-├── .venv                 # Python virtual environment directory
-├── .vscode               # VSCode configuration folder
+├── .vscode               # VSCode configuration directory
 ├── backend               # Backend application directory
 ├── frontend              # Frontend application directory
+├── materials             # Application material directory
+│   ├── coding-conventions    # Coding convention directory
+│   └── screen-design         # Screen Design directory
 ├── docker-compose.yml    # Docker Compose configuration file
 └── README.md             # Project README file
 
