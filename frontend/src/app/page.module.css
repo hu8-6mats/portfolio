@@ -5,6 +5,9 @@
 
     /* 4. Sizing */
     height: 100vh;
+
+    /* 5. Pisitioning */
+    z-index: 0;
 }
 
 .canvas {
@@ -14,6 +17,9 @@
     /* 4. Sizing */
     height: 100%;
     width: 100%;
+
+    /* 5. Pisitioning */
+    z-index: 5;
 }
 
 .message {
@@ -31,6 +37,9 @@
 
     /* 4. Sizing */
     margin-top: -9rem;
+
+    /* 5. Pisitioning */
+    z-index: 5;
 }
 
 .button {
@@ -39,4 +48,7 @@
 
     /* 4. Sizing */
     margin-top: -5rem;
+
+    /* 5. Pisitioning */
+    z-index: 10;
 }

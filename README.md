@@ -18,11 +18,11 @@
     docker ps --all
 
     NAMES
-        portfolio-frontend-1
-        portfolio-backend-1
-        portfolio-pgadmin-1
-        portfolio-mailhog-1
-        portfolio-db-1
+    portfolio-frontend-1
+    portfolio-backend-1
+    portfolio-pgadmin-1
+    portfolio-mailhog-1
+    portfolio-db-1
     ```
 
 3. **Build the backend environment**
@@ -32,11 +32,7 @@
 
     python3 -m venv .venv
     source .venv/bin/activate
-    pip install -r requirements.txt
-    ```
-
-    ```txt
-    # And select the interpreter in venv when using VSCode.
+    pip install -r backend/requirements.txt
     ```
 
 4. **Build the frontend environment**
@@ -64,6 +60,30 @@ cd portfolio
 deactivate
 docker compose down
 ```
+
+## How to setup editor
+
+### Visual Studio Code
+
+1. Install extentions written in `.vscode/extentions.json`
+
+    The necessary settings are described in setting.json.  
+    These are applied automatically, so do not change the workspace settings.
+
+### NeoVim
+
+1. Install Neovim
+
+    ```console
+    brew install nvim
+    ```
+
+2. Copy setting files to your global environment
+
+    ```console
+    # example
+    cp -a .nvim ../../.config/nvim
+    ```
 
 ## Product architectures
 
@@ -124,8 +144,8 @@ root
 - `app`
 
     Use AppRouter, which is recommended for Next.js Series 13 or later.  
-    In the directory under app, place a folder with a name corresponding to each root,  
-    and use `page.tsx` in that folder to control the actual browser display.
+     In the directory under app, place a folder with a name corresponding to each root,  
+     and use `page.tsx` in that folder to control the actual browser display.
 
 - `components`
 
