@@ -2,7 +2,7 @@
 
 ## Screen Design
 
-![A-000](./screen-images/A-000.png)
+![A-000](./screen-images/a-000.png)
 
 ## Description
 
