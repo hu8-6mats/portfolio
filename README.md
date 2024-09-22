@@ -54,12 +54,12 @@
 
 6. **Stop the development environment**
 
-```console
-cd portfolio
+    ```console
+    cd portfolio
 
-deactivate
-docker compose down
-```
+    deactivate
+    docker compose down
+    ```
 
 ## How to setup editor
 
@@ -75,7 +75,7 @@ docker compose down
 1. Install Neovim
 
     ```console
-    brew install nvim
+    brew install neovim
     ```
 
 2. Copy setting files to your global environment
@@ -97,16 +97,14 @@ root
 ├── backend               # Backend application directory
 ├── frontend              # Frontend application directory
 ├── materials             # Application material directory
-│   ├── coding-conventions    # Coding convention directory
-│   └── screen-design         # Screen Design directory
+│   ├── conventions          # Coding convention directory
+│   └── designs              # Screen & FC Design directory
 ├── docker-compose.yml    # Docker Compose configuration file
 └── README.md             # Project README file
 
 ```
 
 ### Frontend
-
----
 
 The frontend is developed using the Next.js framework.  
 The version information is below.
@@ -116,8 +114,6 @@ The version information is below.
 | Next.js    | 14.2.7 |
 | React      | 18.2.0 |
 | TypeScript | 5.2.2  |
-
----
 
 The directory structure is as follows.
 
@@ -139,25 +135,21 @@ root
 └── tsconfig.json        # TypeScript configuration file
 ```
 
----
-
-- `app`
+-   `app`
 
     Use AppRouter, which is recommended for Next.js Series 13 or later.  
      In the directory under app, place a folder with a name corresponding to each root,  
      and use `page.tsx` in that folder to control the actual browser display.
 
-- `components`
+-   `components`
 
     Stores elements that may be used throughout the system, such as buttons and 3d models.
 
-- `functions`
+-   `functions`
 
     Stores functions that may be used system-wide, such as text display control.
 
 ### Backend
-
----
 
 The backend is developed using the fastAPI framework.  
 The version information is below.
@@ -166,8 +158,6 @@ The version information is below.
 | :------ | :------ |
 | fastAPI | 0.100.0 |
 | Python  | 12.3.6  |
-
----
 
 The directory structure is as follows.
 
@@ -178,5 +168,3 @@ backend
 ├── Dockerfile         # Docker configuration file for the backend
 └── requirement.txt    # File for Python dependencies
 ```
-
----
