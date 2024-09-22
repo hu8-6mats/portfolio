@@ -1,11 +1,28 @@
 # [FC-000] Sequential Message
 
+## Path
+
+```console
+frontend/src/functions/SequentialMessage.tsx
+```
+
 ## Description
 
 FC-000 is a functional component.
 
 It displays a binary array of the same length as the string received in the argument  
 and replaces the argument one character at a time based on the specified delay.
+
+## Example
+
+```tsx
+<SequentialMessage
+    primaryDelayMS={1500}
+    binaryStringDelayMS={15}
+    messageDelayMS={25}
+    message='Hello World!\nThis is a test message.'
+/>
+```
 
 ## Technologies Used
 
@@ -34,16 +51,6 @@ and replaces the argument one character at a time based on the specified delay.
 
 ## API Used
 
-|Endpoint|Method|Parameters|
-|/generate_binary_string|GET|length: number|
-
-## Example
-
-```tsx
-<SequentialMessage
-    primaryDelayMS={1500}
-    binaryStringDelayMS={15}
-    messageDelayMS={25}
-    message='Hello World!\nThis is a test message.'
-/>
-```
+| Endpoint                | Method | Parameters     |
+| :---------------------- | :----: | :------------- |
+| /generate_binary_string |  GET   | length: number |
