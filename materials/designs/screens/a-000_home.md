@@ -13,19 +13,19 @@ it displays a button that takes the user to the login or registration page.
 
 ## Components
 
-| ID       | Component         | Z-Index |
-| :------- | :---------------- | :-----: |
-| A-000-0  | SphereCanvas      |    5    |
-| A-000-1  | SequentialMessage |    5    |
-| A-000-2a | PrimaryButton     |   10    |
-| A-000-2b | PrimaryButton     |   10    |
+| ID        | Component         | Z-Index |
+| :-------- | :---------------- | :-----: |
+| VC-000    | SphereCanvas      |    5    |
+| FC-000    | SequentialMessage |    5    |
+| VC-001(a) | PrimaryButton     |   10    |
+| VC-001(b) | PrimaryButton     |   10    |
 
 ## Page Links
 
-| ID       | App Route |
-| :------- | :-------- |
-| A-000-2a | /login    |
-| A-000-2b | /register |
+| ID  | App Route |
+| :-- | :-------- |
+| (a) | /login    |
+| (b) | /register |
 
 ## Table Relations
 

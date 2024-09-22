@@ -24,7 +24,11 @@ and replaces the argument one character at a time based on the specified delay.
 />
 ```
 
-## Technologies Used
+## Where is used
+
+-   [A-000_Home](../screens/a-000_home.md)
+
+## Imported libraries, etc
 
 -   `React`
     -   Functional component
@@ -49,7 +53,7 @@ and replaces the argument one character at a time based on the specified delay.
 | :--------------- | :----: | :-------------------------------------------------------------------------------------------------------------------------------- |
 | displayedMessage | string | Holds the message currently displayed, including the intermediate binary string and its transformation into the original message. |
 
-## API Used
+## API used
 
 | Endpoint                | Method | Parameters     |
 | :---------------------- | :----: | :------------- |
