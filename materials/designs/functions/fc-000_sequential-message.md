@@ -40,22 +40,28 @@ and replaces the argument one character at a time based on the specified delay.
 
 ## Properties
 
-| Property            |  Type  | Required | Default | Description                                                                                                      |
-| :------------------ | :----: | :------: | :-----: | :--------------------------------------------------------------------------------------------------------------- |
-| primaryDelayMS      | number |  False   |  1,000  | Delay before starting to display the binary string for each segment (in milliseconds).                           |
-| binaryStringDelayMS | number |  False   |   20    | Delay between displaying each character of the binary string (in milliseconds).                                  |
-| messageDelayMS      | number |  False   |   10    | Delay between replacing each binary character with the actual message character (in milliseconds).               |
-| endOfLineDelayMS    | string |  False   |   750   | Delay applied after completing the display of each line segment before starting the next line (in milliseconds). |
-| message             | string |   True   |         | The message to display progressively. Multiple lines can be separated by \n.                                     |
+| ID  | Property            |  Type  | Required | Default |
+| :-: | :------------------ | :----: | :------: | :-----: |
+|  0  | primaryDelayMS      | number |  False   |  1,000  |
+|  1  | binaryStringDelayMS | number |  False   |   20    |
+|  2  | messageDelayMS      | number |  False   |   10    |
+|  3  | endOfLineDelayMS    | string |  False   |   750   |
+|  4  | message             | string |   True   |         |
+
+0. Delay before starting to display the binary string for each segment (in milliseconds).
+1. Delay between displaying each character of the binary string (in milliseconds).
+2. Delay between replacing each binary character with the actual message character (in milliseconds).
+3. Delay applied after completing the display of each line segment before starting the next line (in milliseconds).
+4. The message to display progressively. Multiple lines can be separated by \n.
 
 ## States
 
-| State            |  Type  | Description                                                                                                                       |
-| :--------------- | :----: | :-------------------------------------------------------------------------------------------------------------------------------- |
-| displayedMessage | string | Holds the message currently displayed, including the intermediate binary string and its transformation into the original message. |
+| ID  |      State       | Type   |
+| :-: | :--------------: | :----- |
+|  0  | displayedMessage | string |
+
+0. Holds the message currently displayed.
 
 ## API used
 
-| Endpoint | Method | Parameters |
-| :------- | :----: | :--------- |
-| None     |        |            |
+None
