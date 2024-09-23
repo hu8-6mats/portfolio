@@ -20,6 +20,7 @@ and replaces the argument one character at a time based on the specified delay.
     primaryDelayMS={1500}
     binaryStringDelayMS={15}
     messageDelayMS={25}
+    endOfLineDelayMS={1000}
     message='Hello World!\nThis is a test message.'
 />
 ```
@@ -34,18 +35,18 @@ and replaces the argument one character at a time based on the specified delay.
     -   Functional component
     -   Hooks
         -   useState
-        -   useEffect
 -   `CSS Modules`
     -   Styles are applied via SequentialMessage.module.css
 
 ## Properties
 
-| Property            |  Type  | Required | Default | Description                                                                                        |
-| :------------------ | :----: | :------: | :-----: | :------------------------------------------------------------------------------------------------- |
-| primaryDelayMS      | number |  False   |  1,000  | Delay before starting to display the binary string for each segment (in milliseconds).             |
-| binaryStringDelayMS | number |  False   |   20    | Delay between displaying each character of the binary string (in milliseconds).                    |
-| messageDelayMS      | number |  False   |   10    | Delay between replacing each binary character with the actual message character (in milliseconds). |
-| message             | string |   True   |         | The message to display progressively. Multiple lines can be separated by \n.                       |
+| Property            |  Type  | Required | Default | Description                                                                                                      |
+| :------------------ | :----: | :------: | :-----: | :--------------------------------------------------------------------------------------------------------------- |
+| primaryDelayMS      | number |  False   |  1,000  | Delay before starting to display the binary string for each segment (in milliseconds).                           |
+| binaryStringDelayMS | number |  False   |   20    | Delay between displaying each character of the binary string (in milliseconds).                                  |
+| messageDelayMS      | number |  False   |   10    | Delay between replacing each binary character with the actual message character (in milliseconds).               |
+| endOfLineDelayMS    | string |  False   |   750   | Delay applied after completing the display of each line segment before starting the next line (in milliseconds). |
+| message             | string |   True   |         | The message to display progressively. Multiple lines can be separated by \n.                                     |
 
 ## States
 
@@ -55,6 +56,6 @@ and replaces the argument one character at a time based on the specified delay.
 
 ## API used
 
-| Endpoint                | Method | Parameters     |
-| :---------------------- | :----: | :------------- |
-| /generate_binary_string |  GET   | length: number |
+| Endpoint | Method | Parameters |
+| :------- | :----: | :--------- |
+| None     |        |            |
