@@ -40,19 +40,24 @@ and replaces the argument one character at a time based on the specified delay.
 
 ## Properties
 
-| ID  |      Property       |  Type  | Required | Default |
-| :-: | :-----------------: | :----: | :------: | :------ |
-|  0  |   primaryDelayMS    | number |  False   | 1,000   |
+| ID  | Property            |  Type  | Required | Default |
+| :-: | :------------------ | :----: | :------: | :------ |
+|  0  | primaryDelayMS      | number |  False   | 1,000   |
 |  1  | binaryStringDelayMS | number |  False   | 20      |
-|  2  |   messageDelayMS    | number |  False   | 10      |
-|  3  |  endOfLineDelayMS   | string |  False   | 750     |
-|  4  |       message       | string |   True   |         |
+|  2  | messageDelayMS      | number |  False   | 10      |
+|  3  | endOfLineDelayMS    | string |  False   | 750     |
+|  4  | message             | string |   True   |         |
 
-0. Delay before starting to display the binary string for each segment (in milliseconds).
-1. Delay between displaying each character of the binary string (in milliseconds).
-2. Delay between replacing each binary character with the actual message character (in milliseconds).
-3. Delay applied after completing the display of each line segment before starting the next line (in milliseconds).
-4. The message to display progressively. Multiple lines can be separated by \n.
+-   `0. primaryDelayMS`:
+    -   Delay before starting to display the binary string for each segment (in milliseconds).
+-   `1. binaryStringDelayMS`:
+    -   Delay between displaying each character of the binary string (in milliseconds).
+-   `2. messageDelayMS`:
+    -   Delay between replacing each binary character with the actual message character (in milliseconds).
+-   `3. endOfLineDelayMS`:
+    -   Delay applied after completing the display of each line segment before starting the next line (in milliseconds).
+-   `4. message`:
+    -   The message to display progressively. Multiple lines can be separated by \n.
 
 ## States
 
@@ -60,7 +65,8 @@ and replaces the argument one character at a time based on the specified delay.
 | :-: | :--------------: | :----- |
 |  0  | displayedMessage | string |
 
-0. Holds the message currently displayed, including the intermediate binary string and its transformation into the original message.
+-   `0. displayedMessage`:
+    -   Holds the message currently displayed, including the intermediate binary string and its transformation into the original message.
 
 ## API used
 
