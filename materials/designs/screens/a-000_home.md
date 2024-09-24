@@ -15,8 +15,8 @@ it displays a button that takes the user to the login or registration page.
 
 | ID        | Component         | Z-Index |
 | :-------- | :---------------- | :-----: |
-| VC-000    | SphereCanvas      |    5    |
 | FC-000    | SequentialMessage |    5    |
+| VC-000    | SphereCanvas      |    5    |
 | VC-001(a) | PrimaryButton     |   10    |
 | VC-001(b) | PrimaryButton     |   10    |
 
