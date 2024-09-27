@@ -1,51 +1,65 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import styles from './SphereCanvas.module.css';
+
 import Sphere from './elements/Sphere';
 
+import styles from './SphereCanvas.module.css';
 
 type SphereCanvasProps = {
     elementType: 'Dot' | 'Hexagon';
     elementQuantity: number;
     areElementsRandomized: boolean;
-    cameraPosition?: [number, number, number];
-    cameraFOV?: number;
-    lightIntensity?: number;
-    lightPosition?: [number, number, number];
+    primaryDelay: number;
+    cameraPosition: [number, number, number];
+    cameraFOV: number;
+    lightIntensity: number;
+    lightPosition: [number, number, number];
 };
 
 const SphereCanvas: React.FC<SphereCanvasProps> = ({
     elementType,
-    elementQuantity,
     areElementsRandomized,
-    cameraPosition = [0, 0, 3],
-    cameraFOV = 90,
-    lightIntensity = 2,
-    lightPosition = [0, 0, 0],
+    elementQuantity,
+    primaryDelay,
+    cameraPosition,
+    cameraFOV,
+    lightIntensity,
+    lightPosition,
 }) => {
+    const [isSphereVisible, setIsSphereVisible] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsSphereVisible(true);
+            setIsVisible(true);
+        }, primaryDelay);
+
+        return () => clearTimeout(timer);
+    }, [primaryDelay]);
+
     let sphereContent = null;
 
     switch (elementType) {
         case 'Dot':
-            sphereContent = (
+            sphereContent = isSphereVisible ? (
                 <Sphere
                     elementType='Dot'
-                    elementQuantity={elementQuantity}
                     areElementsRandomized={areElementsRandomized}
+                    elementQuantity={elementQuantity}
                 />
-            );
-
+            ) : null;
             break;
         case 'Hexagon':
-            sphereContent = (
+            sphereContent = isSphereVisible ? (
                 <Sphere
                     elementType='Hexagon'
-                    elementQuantity={elementQuantity}
                     areElementsRandomized={areElementsRandomized}
+                    elementQuantity={elementQuantity}
                 />
-            );
-
+            ) : null;
             break;
         default:
             break;
@@ -54,7 +68,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     return (
         <Canvas
             camera={{ position: cameraPosition, fov: cameraFOV }}
-            className={styles.canvas}
+            className={`${styles.canvas} ${isVisible ? styles.canvasVisible : ''}`}
         >
             <ambientLight intensity={lightIntensity} />
             <pointLight position={lightPosition} />

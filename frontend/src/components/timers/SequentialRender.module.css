@@ -1,12 +1,9 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.fadeIn {
+  opacity: 0;
+  transition: opacity 500ms linear;
 }
 
-.fadeIn {
-    animation: fadeIn 500ms ease-in-out;
+.visible {
+  opacity: 1;
 }
+

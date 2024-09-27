@@ -2,7 +2,7 @@
 
 import styles from './page.module.css';
 
-import SphereCanvas from '@/components/visuals/SphereCanvas';
+import SphereCanvas from '@/components/shapes/SphereCanvas';
 import AccountRegisterForm from './AccountRegisterForm';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 
