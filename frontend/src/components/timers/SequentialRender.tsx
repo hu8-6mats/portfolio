@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, ReactNode } from 'react';
+import styles from './SequentialRender.module.css';
 
 type SequentialRenderProps = {
     initialRenderDelayMS?: number;
@@ -10,7 +11,7 @@ type SequentialRenderProps = {
 
 const SequentialRender: React.FC<SequentialRenderProps> = ({
     initialRenderDelayMS = 1000,
-    sequentialRenderDelayMS = 750,
+    sequentialRenderDelayMS = 1000,
     children,
 }) => {
     const [visibleComponentsIndex, setVisibleComponentsIndex] = useState<number>(0);
@@ -29,7 +30,7 @@ const SequentialRender: React.FC<SequentialRenderProps> = ({
             timeouts.push(
                 setTimeout(
                     () => {
-                        setVisibleComponentsIndex(i + 2);
+                        setVisibleComponentsIndex((prev) => prev + 1);
                     },
                     initialRenderDelayMS + (i + 1) * sequentialRenderDelayMS
                 )
@@ -41,7 +42,18 @@ const SequentialRender: React.FC<SequentialRenderProps> = ({
         };
     }, [children]);
 
-    return <>{childrenArray.slice(0, visibleComponentsIndex)}</>;
+    return (
+        <>
+            {childrenArray.map((child, i) => (
+                <div
+                    key={i}
+                    className={`${styles.fadeIn} ${i < visibleComponentsIndex ? styles.visible : ''}`}
+                >
+                    {child}
+                </div>
+            ))}
+        </>
+    );
 };
 
 export default SequentialRender;

@@ -2,9 +2,9 @@
 
 import styles from './page.module.css';
 
-import SphereCanvas from '@/components/visuals/SphereCanvas';
-import AccountRegisterForm from './AccountRegisterForm';
+import SphereCanvas from '@/components/shapes/SphereCanvas';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
+import AccountRegisterForm from './AccountRegisterForm';
 
 const RegisterPage: React.FC = () => {
     const handleFormSubmit = async (FormData: {

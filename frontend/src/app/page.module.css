@@ -3,6 +3,9 @@
     display: grid;
     grid-template-rows: 80% 10% 10%;
 
+    /* 2. Color */;
+    background: radial-gradient(circle, var(--gray-75), var(--black-100));
+
     /* 4. Sizing */
     height: 100vh;
 
@@ -47,7 +50,8 @@
     grid-row: 3 / 4;
 
     /* 4. Sizing */
-    margin-top: -5rem;
+    width: 50%;
+    margin: -5rem auto;
 
     /* 5. Pisitioning */
     z-index: 10;

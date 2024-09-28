@@ -6,7 +6,7 @@
 
     /* Color */
     border: var(--black-100);
-    background: radial-gradient(circle, var(--gray-50) 0%, var(--black-100) 100%);
+    background: radial-gradient(circle, var(--black-100), var(--transparent));
     color: var(--white-75);
 
     /* Typography */
@@ -31,7 +31,7 @@
 
 .primaryButton:hover {
     /* Color */
-    background: radial-gradient(circle, var(--gray-100) 0%, var(--black-100) 100%);
+    background: radial-gradient(circle, var(--gray-100), var(--transparent));
 
     /* Animation */
     transform: translateY(0.25em);
