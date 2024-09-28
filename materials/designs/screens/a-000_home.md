@@ -2,7 +2,7 @@
 
 ## Screen Design
 
-![A-000](./screen-images/a-000.png)
+![A-000](./screen-images/a-000_home.png)
 
 ## Description
 
@@ -13,12 +13,12 @@ it displays a button that takes the user to the login or registration page.
 
 ## Components
 
-| ID        | Component         | Z-Index |
-| :-------- | :---------------- | :-----: |
-| FC-000    | SequentialMessage |    5    |
-| VC-000    | SphereCanvas      |    5    |
-| VC-001(a) | PrimaryButton     |   10    |
-| VC-001(b) | PrimaryButton     |   10    |
+| ID         | Component         | Z-Index |
+| :--------- | :---------------- | :-----: |
+| FC-v000    | SphereCanvas      |    5    |
+| FC-t000    | SequentialMessage |    5    |
+| FC-b000(a) | PrimaryButton     |   10    |
+| FC-b000(b) | PrimaryButton     |   10    |
 
 ## Page Links
 

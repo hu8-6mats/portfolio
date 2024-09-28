@@ -1,0 +1,12 @@
+.canvas {
+    /* 2. Color */
+    opacity: 0;
+
+    /* 7. Animation */
+    transition: opacity 1500ms ease;
+}
+
+.canvasVisible {
+    /* 2. Color */
+    opacity: 1;
+}

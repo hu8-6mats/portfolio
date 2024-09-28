@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 
 import styles from './AccountRegisterForm.module.css';
 
-import InputField from '@/functions/InputField';
+import InputField from '@/components/texts/InputField';
 import ArrowButton from '@/components/buttons/ArrowButton';
-import SequentialMessage from '@/functions/SequentialMessage';
+import SequentialMessage from '@/components/texts/SequentialMessage';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import PrimaryModal from '@/components/modals/PrimaryModal';
 

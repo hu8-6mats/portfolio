@@ -11,22 +11,22 @@ type SphereCanvasProps = {
     elementType: 'Dot' | 'Hexagon';
     elementQuantity: number;
     areElementsRandomized: boolean;
-    primaryDelay: number;
-    cameraPosition: [number, number, number];
-    cameraFOV: number;
-    lightIntensity: number;
-    lightPosition: [number, number, number];
+    primaryDelay?: number;
+    cameraPosition?: [number, number, number];
+    cameraFOV?: number;
+    lightIntensity?: number;
+    lightPosition?: [number, number, number];
 };
 
 const SphereCanvas: React.FC<SphereCanvasProps> = ({
     elementType,
     areElementsRandomized,
     elementQuantity,
-    primaryDelay,
-    cameraPosition,
-    cameraFOV,
-    lightIntensity,
-    lightPosition,
+    primaryDelay = 1000,
+    cameraPosition = [0, 0, 3],
+    cameraFOV = 90,
+    lightIntensity = 2,
+    lightPosition = [0, 0, 0],
 }) => {
     const [isSphereVisible, setIsSphereVisible] = useState<boolean>(false);
     const [isVisible, setIsVisible] = useState<boolean>(false);

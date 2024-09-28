@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 
-import SphereCanvas from '@/components/visuals/SphereCanvas';
-import SequentialMessage from '@/functions/SequentialMessage';
+import SphereCanvas from '@/components/shapes/SphereCanvas';
+import SequentialMessage from '@/components/texts/SequentialMessage';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 
 const Home = () => {

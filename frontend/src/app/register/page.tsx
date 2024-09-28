@@ -3,8 +3,8 @@
 import styles from './page.module.css';
 
 import SphereCanvas from '@/components/shapes/SphereCanvas';
-import AccountRegisterForm from './AccountRegisterForm';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
+import AccountRegisterForm from './AccountRegisterForm';
 
 const RegisterPage: React.FC = () => {
     const handleFormSubmit = async (FormData: {
