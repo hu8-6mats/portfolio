@@ -1,36 +1,29 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './PrimaryButton.module.css';
+import useDelayVisibility from '@/hooks/useDelayVisibility';
 
 type PrimaryButtonProps<T = any> = {
-    primaryDelayMS?: number;
+    initialRenderDelayMS: number;
     buttonType: 'button' | 'submit';
     buttonLabel: string;
     redirectUrl?: string;
+    data?: T;
     onClick?: () => void;
     onSubmit?: (data: T) => void;
-    data?: T;
 };
 
-const PrimaryButton = <T,>({
-    primaryDelayMS = 1000,
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({
+    initialRenderDelayMS,
     buttonType,
     buttonLabel,
     redirectUrl,
+    data,
     onClick,
     onSubmit,
-    data,
-}: PrimaryButtonProps<T>) => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsVisible(true);
-        }, primaryDelayMS);
-
-        return () => clearTimeout(timer);
-    }, [primaryDelayMS]);
+}) => {
+    const isVisible: boolean = useDelayVisibility({ initialRenderDelayMS });
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
@@ -50,7 +43,7 @@ const PrimaryButton = <T,>({
 
     return (
         <button
-            className={`${styles.primaryButton} ${isVisible ? styles.primaryButtonVisible : ''}`}
+            className={`${styles.button} ${isVisible ? styles.buttonVisible : ''}`}
             onClick={handleClick}
             type={buttonType}
         >

@@ -27,13 +27,13 @@ const Home = () => {
             </div>
             <div className={styles.button}>
                 <PrimaryButton
-                    primaryDelayMS={5000}
+                    initialRenderDelayMS={6000}
                     buttonLabel='Login'
                     buttonType='button'
                     redirectUrl='/login'
                 />
                 <PrimaryButton
-                    primaryDelayMS={6000}
+                    initialRenderDelayMS={7000}
                     buttonLabel='Register'
                     buttonType='button'
                     redirectUrl='/register'

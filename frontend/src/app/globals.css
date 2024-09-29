@@ -15,13 +15,17 @@
     --gray-50: rgba(50, 50, 50, 0.5);
     --gray-75: rgba(50, 50, 50, 0.75);
     --gray-100: rgba(50, 50, 50, 1);
+    --darkgray-25: rgba(25, 25, 25, 0.25);
     --darkgray-50: rgba(25, 25, 25, 0.5);
     --darkgray-75: rgba(25, 25, 25, 0.75);
     --darkgray-100: rgba(25, 25, 25, 1);
+    --black-25: rgba(0, 0, 0, 0.25);
     --black-50: rgba(0, 0, 0, 0.5);
     --black-75: rgba(0, 0, 0, 0.75);
     --black-100: rgba(0, 0, 0, 1);
     --transparent: rgba(0, 0, 0, 0);
+
+    --background: radial-gradient(circle, var(--gray-75), var(--black-100));
 }
 
 * {

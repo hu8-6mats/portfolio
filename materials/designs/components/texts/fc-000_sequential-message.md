@@ -2,7 +2,7 @@
 
 ## Path
 
-```console
+```
 frontend/src/functions/SequentialMessage.tsx
 ```
 
@@ -27,7 +27,7 @@ and replaces the argument one character at a time based on the specified delay.
 
 ## Where is used
 
--   [A-000_Home](../screens/a-000_home.md)
+-   [A-000_Home](../../screens/a-000_home.md)
 
 ## Imported libraries, etc
 

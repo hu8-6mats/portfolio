@@ -42,7 +42,7 @@
 
 .input {
     /* 2. Color */
-    background: var(--black-75);
+    background: var(--transparent);
     color: var(--white-75);
 
     /* 3. Typography */

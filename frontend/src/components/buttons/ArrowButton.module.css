@@ -1,129 +1,139 @@
 .leftArrowButton {
-    /* Layout */
+    /* 1. Layout */
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* Sizing */
-    width: 4rem;
-    height: 4rem;
-    padding: 0.75rem;
-    margin-block: 0.75rem;
-
-    /* Positioning */
-    position: relative;
-
-    /* Color */
-    background: var(--blacks-75);
+    /* 2. Color */
+    background: var(--black-25);
     color: var(--white-75);
-    border: none;
+    opacity: 0;
 
-    /* Typography */
+    /* 3. Typography */
     font-size: 1.5rem;
     font-weight: var(--font-weight-light);
 
-    /* Decoration */
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px var(--white-50);
+    /* 4. Sizing */
+    margin-block: 0.75rem;
+    padding: 0.75rem;
+    width: 4rem;
+    height: 4rem;
 
-    /* Animation */
-    opacity: 0;
-    transition: opacity 750ms ease, transform 500ms ease, box-shadow 500ms ease;
+    /* 5. Positioning */
+    position: relative;
+
+    /* 6. Decoration */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem var(--white-50);
+
+    /* 7. Animation */
+    transition:
+        opacity 750ms ease,
+        transform 500ms ease,
+        box-shadow 500ms ease;
 }
 
 .leftArrowButtonVisible {
-    /* Animation */
+    /* 2. Color */
     opacity: 1;
 }
 
 .leftArrowButton::after {
-    /* Layout */
+    /* 1. Layout */
     content: '';
 
-    /* Sizing */
-    width: 10px;
-    height: 10px;
+    /* 4. Sizing */
+    width: 1rem;
+    height: 1rem;
 
-    /* Color */
+    /* 6. Decaration */
     border-left: 1px solid var(--white-75);
     border-top: 1px solid var(--white-75);
 
-    /* Positioning */
+    /* 5. Positioning */
     position: absolute;
     top: 50%;
     left: 55%;
+
+    /* 7. Animation */
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .leftArrowButton:hover {
-    /* Decoration */
-    box-shadow: 5px 0px 10px var(--white-50);
+    /* 6. Decoration */
+    box-shadow: 0.5rem 0 1rem var(--white-50);
 
-    /* Animation */
-    transform: translateX(-10px);
+    /* 7. Animation */
+    transform: translateX(-1rem);
 }
 
 .rightArrowButton {
-    /* Layout */
+    /* 1. Layout */
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* Sizing */
+    /* 2. Color */
+    background: var(--black-25);
+    color: var(--white-75);
+    border: none;
+    opacity: 0;
+
+    /* 3. Typography */
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-light);
+
+    /* 4. Sizing */
     width: 4rem;
     height: 4rem;
     padding: 0.75rem;
     margin-block: 0.75rem;
 
-    /* Positioning */
+    /* 5. Positioning */
     position: relative;
 
-    /* Color */
-    background: var(--blacks-75);
-    color: var(--white-75);
-    border: none;
-
-    /* Typography */
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-light);
-
-    /* Decoration */
+    /* 6. Decoration */
     border-radius: 50%;
-    box-shadow: 0px 0px 5px var(--white-50);
+    box-shadow: 0 0 0.5rem var(--white-50);
 
-    /* Animation */
-    opacity: 0;
-    transition: opacity 750ms ease, transform 500ms ease, box-shadow 500ms ease;
+    /* 7. Animation */
+    transition:
+        opacity 750ms ease,
+        transform 500ms ease,
+        box-shadow 500ms ease;
 }
 
 .rightArrowButtonVisible {
-    /* Animation */
+    /* 2. Color */
     opacity: 1;
 }
 
 .rightArrowButton::after {
-    /* Layout */
+    /* 1. Layout */
     content: '';
 
-    /* Sizing */
-    width: 10px;
-    height: 10px;
+    /* 4. Sizing */
+    width: 1rem;
+    height: 1rem;
 
-    /* Color */
+    /* 2. Color */
     border-right: 1px solid var(--white-75);
     border-top: 1px solid var(--white-75);
 
-    /* Positioning */
+    /* 5. Positioning */
     position: absolute;
     top: 50%;
     left: 45%;
+
+    /* 7. Animation */
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .rightArrowButton:hover {
-    /* Decoration */
-    box-shadow: -5px 0px 10px var(--white-50);
+    /* 6. Decoration */
+    box-shadow: -0.5rem 0 1rem var(--white-50);
 
-    /* Animation */
-    transform: translateX(10px);
+    /* 7. Animation */
+    transform: translateX(1rem);
 }

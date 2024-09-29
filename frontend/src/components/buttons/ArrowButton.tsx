@@ -1,34 +1,25 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './ArrowButton.module.css';
+import useDelayVisibility from '@/hooks/useDelayVisibility';
 
 type Direction = 'left' | 'right';
 
 type ArrowButtonProps = {
-    primaryDelayMS?: number;
+    initialRenderDelayMS: number;
     buttonType: 'button' | 'submit';
     buttonDirection: 'left' | 'right';
     onClick?: () => void;
 };
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({
-    primaryDelayMS = 1000,
+    initialRenderDelayMS,
     buttonType,
     buttonDirection,
     onClick,
 }) => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    if (onClick != null) {
-        useEffect(() => {
-            const timer = setTimeout(() => {
-                setIsVisible(true);
-            }, primaryDelayMS);
-
-            return () => clearTimeout(timer);
-        }, [primaryDelayMS]);
-    }
+    const isVisible: boolean = useDelayVisibility({ initialRenderDelayMS });
 
     const directionClassMap: { [key in Direction]: string } = {
         left: styles.leftArrowButton,
